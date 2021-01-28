@@ -1,0 +1,57 @@
+
+<app-titlebar></app-titlebar>
+<div class="row">
+    <div class="col">
+        <app-viewitems></app-viewitems>
+        </div>
+
+
+<div class="col">
+<div class="card" style="width: 30rem;  margin-top: 1rem;">
+    <div class="card-body">
+
+                        <form  [formGroup]="orderForm"  autocomplete="off" novalidate (ngSubmit)="addOrders(orderForm.value)">
+                            <div class="form-row">
+                            <div class="form-group col-md-11" >
+                                <label for="itemName">Item Name</label>
+                                <input type="text" id="itemName" class="form-control" formControlName="itemName" name="itemName" placeholder="Beans">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="qty">Quantity</label>
+                                 <input type="text" class="form-control" formControlName="quantity" name="quantity" placeholder="">
+                                 </div>
+ 
+                                 <div class="form-group col-md-6">
+                                    <label for="uprice">Unit Price</label>
+                                  <input type="text" class="form-control" formControlName="unitPrice" name ="unitPrice" placeholder="0.00">
+                                  </div>
+                            </div>
+                            <div class="form-row">
+                                  <div class="form-group col-md-11">
+                                    <label for="exp">Expire Date</label>
+                                 <input type="date" class="form-control" formControlName="expireDate" name="expireDate" placeholder="yyyy-dd-mm">
+                                  </div>
+                            </div>
+                            <div class="form-row">
+                                                                 
+                                <div class="form-group col-md-11">
+                                    <label for="hdate">Harvest Date</label>
+                                 <input type="date" class="form-control" formControlName="harvestDate" name="harvestDate" placeholder="yyyy-dd-mm"> 
+                                 </div>
+                            </div>
+                                 <!-- <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Available Stock (in kg)">
+                                 </div> -->
+                                 
+                                 <div class="form-group">
+                                     <button class="btn btn-primary" type="submit">Submit</button>
+                                 
+                                </div> 
+                        </form>
+                   
+    </div>
+    </div>
+    </div>
+</div>

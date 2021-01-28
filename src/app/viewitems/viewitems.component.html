@@ -1,0 +1,26 @@
+<div class="card" style="width: 40rem;  margin-top: 1rem; margin-left: 5rem;">
+    
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Iten Name</th>
+            <th scope="col">Quantity (kg)</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of result;" >
+            <td>{{i.itemName}}</td>
+            <td>{{i.qty}}</td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    <!-- <ul class="list-group list-group-flush" >
+        <li class="list-group-item">{{result.itemName}}</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul> -->
+  </div>
